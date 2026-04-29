@@ -32,6 +32,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-gray-50">
         <Navigation />
         <main className="flex-1">{children}</main>
+        <SpeedInsights dsn="qkDnRcP15xDBs8hEsYHX5qwYxsk" />
       </body>
     </html>
   );
