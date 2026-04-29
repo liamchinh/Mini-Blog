@@ -2,10 +2,7 @@ import Link from "next/link";
 import type { Post } from "@/types/post";
 
 async function getPost(id: string): Promise<Post | undefined> {
-    const baseUrl = process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : "http://localhost:3000";
-    const res = await fetch(`${baseUrl}/api/posts`, {
+    const res = await fetch(`/api/posts`, {
         cache: "no-store",
     });
     const posts: Post[] = await res.json();
